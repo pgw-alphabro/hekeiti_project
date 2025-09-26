@@ -82,8 +82,8 @@
 			
 			/* 공모요강 섹션 */
 			.overlay {
-				padding: 10px 5px;
-				margin: 10px 2px;
+				padding: 8px 2px;
+				margin: 5px 1px;
 				overflow: visible;
 			}
 			
@@ -134,22 +134,24 @@
 			
 			/* 운영절차 섹션 */
 			.process-steps {
-				flex-direction: column;
+				flex-direction: row;
 				align-items: flex-start;
 				margin: 10px 0;
-				padding: 0 2px;
+				padding: 0 1px;
+				justify-content: space-between;
+				flex-wrap: wrap;
 			}
 			
 			.process-step {
-				margin: 8px 0;
-				width: 100%;
-				max-width: 100%;
-				padding: 5px 2px;
-				text-align: left;
+				margin: 5px 0;
+				width: 18%;
+				max-width: 18%;
+				padding: 3px 1px;
+				text-align: center;
 				display: flex !important;
-				flex-direction: row !important;
-				align-items: flex-start;
-				gap: 8px;
+				flex-direction: column !important;
+				align-items: center;
+				gap: 3px;
 			}
 			
 			.process-content {
@@ -159,18 +161,18 @@
 			}
 			
 			.process-circle {
-				width: 20px;
-				height: 20px;
-				font-size: 0.4em;
-				margin: 0;
+				width: 15px;
+				height: 15px;
+				font-size: 0.3em;
+				margin: 0 0 2px 0;
 				flex-shrink: 0;
 			}
 			
 			.process-title {
-				font-size: 0.3em;
-				margin-bottom: 2px;
-				line-height: 1.1;
-				text-align: left;
+				font-size: 0.2em;
+				margin-bottom: 1px;
+				line-height: 1.0;
+				text-align: center;
 				width: 100%;
 				white-space: normal;
 				word-break: keep-all;
@@ -178,18 +180,18 @@
 			}
 			
 			.process-description {
-				font-size: 0.25em;
-				line-height: 1.2;
-				text-align: left;
+				font-size: 0.15em;
+				line-height: 1.1;
+				text-align: center;
 				width: 100%;
 				white-space: normal;
 				word-break: keep-all;
 				overflow-wrap: break-word;
 			}
 			
-			/* 연결선 제거 (모바일에서는 세로 배치) */
+			/* 연결선 표시 (모바일에서도 가로 배치) */
 			.process-connector {
-				display: none;
+				display: block;
 			}
 			
 			/* 푸터 */
