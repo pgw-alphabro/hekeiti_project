@@ -63,6 +63,39 @@
 		<link rel="stylesheet" href="custom.css">
 		<link rel="stylesheet" href="default.css">
 
+		<!-- Download Function -->
+		<script>
+		function downloadFile(filePath, fileName) {
+			// Fetch the file
+			fetch(filePath)
+				.then(response => response.blob())
+				.then(blob => {
+					// Create a temporary URL for the blob
+					const url = window.URL.createObjectURL(blob);
+					
+					// Create a temporary anchor element
+					const a = document.createElement('a');
+					a.style.display = 'none';
+					a.href = url;
+					a.download = fileName;
+					
+					// Add to DOM, click, and remove
+					document.body.appendChild(a);
+					a.click();
+					window.URL.revokeObjectURL(url);
+					document.body.removeChild(a);
+				})
+				.catch(error => {
+					console.error('Download failed:', error);
+					// Fallback to direct download
+					const a = document.createElement('a');
+					a.href = filePath;
+					a.download = fileName;
+					a.click();
+				});
+		}
+		</script>
+
 		<!-- Mobile Responsive CSS -->
 		<style>
 		/* 모바일 반응형 스타일 */
@@ -75,8 +108,8 @@
 			
 			/* 공모요강 제목 크기 키우기 */
 			.overlay h2 {
-				font-size: 1.2em !important;
-				margin-bottom: 15px !important;
+				font-size: 1.8em !important;
+				margin-bottom: 20px !important;
 				line-height: 1.3 !important;
 			}
 			
@@ -537,10 +570,10 @@
                         <p class="txt-notice">※ 신청자격 증빙서류는 멘토링 대상자와 자격검토 희망자에 한해 별도 제출</p>
 
                         <div class="text-center mb-4">
-                            <a href="공고문.hwp" download="(붙임)_환경창업_아이디어_상시_모집_안내.hwp" class="mb-2 me-2 btn btn-lg" style="background-color: #28a745; color: white; border: none; font-size: 1.1em; padding: 12px 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3); text-decoration: none; display: inline-block;" onclick="event.preventDefault(); const link = document.createElement('a'); link.href = '공고문.hwp'; link.download = '(붙임)_환경창업_아이디어_상시_모집_안내.hwp'; link.click();">
+                            <a href="공고문.hwp" class="mb-2 me-2 btn btn-lg" style="background-color: #28a745; color: white; border: none; font-size: 1.1em; padding: 12px 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3); text-decoration: none; display: inline-block;" onclick="downloadFile('공고문.hwp', '(붙임)_환경창업_아이디어_상시_모집_안내.hwp'); return false;">
                                 공고문 다운로드
                             </a>
-                            <a href="신청서.hwp" download="(별첨)_환경창업_멘토링_신청서.hwp" class="mb-2 me-2 btn btn-lg" style="background-color: #28a745; color: white; border: none; font-size: 1.1em; padding: 12px 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3); text-decoration: none; display: inline-block;" onclick="event.preventDefault(); const link = document.createElement('a'); link.href = '신청서.hwp'; link.download = '(별첨)_환경창업_멘토링_신청서.hwp'; link.click();">
+                            <a href="신청서.hwp" class="mb-2 me-2 btn btn-lg" style="background-color: #28a745; color: white; border: none; font-size: 1.1em; padding: 12px 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3); text-decoration: none; display: inline-block;" onclick="downloadFile('신청서.hwp', '(별첨)_환경창업_멘토링_신청서.hwp'); return false;">
                                 신청서 다운로드
                             </a>
                         </div>
