@@ -75,7 +75,12 @@
 			
 			/* 모든 텍스트 요소 강제 적용 */
 			p, li, span, div, h1, h2, h3, h4, h5, h6 {
-				font-size: 0.63em !important;
+				font-size: 0.4em !important;
+			}
+			
+			/* 표와 운영절차 텍스트 추가 강제 적용 */
+			.overlay table, .overlay table th, .overlay table td, .process-title, .process-description {
+				font-size: 0.2em !important;
 			}
 			
 			/* 헤더 로고 조정 */
@@ -541,10 +546,10 @@
                         <p class="txt-notice">※ 신청자격 증빙서류는 멘토링 대상자와 자격검토 희망자에 한해 별도 제출</p>
 
                         <div class="text-center mb-4">
-                            <a href="공고문.hwp" download="(붙임)_환경창업_아이디어_상시_모집_안내.hwp" class="mb-2 me-2 btn btn-lg" style="background-color: #28a745; color: white; border: none; font-size: 1.1em; padding: 12px 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3); text-decoration: none; display: inline-block;" onclick="this.download='(붙임)_환경창업_아이디어_상시_모집_안내.hwp'">
+                            <a href="공고문.hwp" download="(붙임)_환경창업_아이디어_상시_모집_안내.hwp" class="mb-2 me-2 btn btn-lg" style="background-color: #28a745; color: white; border: none; font-size: 1.1em; padding: 12px 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3); text-decoration: none; display: inline-block;" onclick="event.preventDefault(); const link = document.createElement('a'); link.href = '공고문.hwp'; link.download = '(붙임)_환경창업_아이디어_상시_모집_안내.hwp'; link.click();">
                                 공고문 다운로드
                             </a>
-                            <a href="신청서.hwp" download="(별첨)_환경창업_멘토링_신청서.hwp" class="mb-2 me-2 btn btn-lg" style="background-color: #28a745; color: white; border: none; font-size: 1.1em; padding: 12px 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3); text-decoration: none; display: inline-block;" onclick="this.download='(별첨)_환경창업_멘토링_신청서.hwp'">
+                            <a href="신청서.hwp" download="(별첨)_환경창업_멘토링_신청서.hwp" class="mb-2 me-2 btn btn-lg" style="background-color: #28a745; color: white; border: none; font-size: 1.1em; padding: 12px 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3); text-decoration: none; display: inline-block;" onclick="event.preventDefault(); const link = document.createElement('a'); link.href = '신청서.hwp'; link.download = '(별첨)_환경창업_멘토링_신청서.hwp'; link.click();">
                                 신청서 다운로드
                             </a>
                         </div>
