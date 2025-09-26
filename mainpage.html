@@ -80,7 +80,13 @@
 			
 			/* 표와 운영절차 텍스트 추가 강제 적용 */
 			.overlay table, .overlay table th, .overlay table td, .process-title, .process-description {
-				font-size: 0.2em !important;
+				font-size: 0.15em !important;
+			}
+			
+			/* 표 텍스트 극도 축소 */
+			.overlay table th, .overlay table td {
+				font-size: 0.12em !important;
+				padding: 2px 1px !important;
 			}
 			
 			/* 헤더 로고 조정 */
@@ -112,15 +118,15 @@
 			
 			/* 표 스타일 - 모바일에서 가로 스크롤 가능 */
 			.overlay table {
-				font-size: 0.25em !important;
-				margin: 10px 0;
+				font-size: 0.12em !important;
+				margin: 5px 0 !important;
 				width: 100%;
 				table-layout: fixed;
 			}
 			
 			.overlay table th,
 			.overlay table td {
-				padding: 3px 2px !important;
+				padding: 1px 1px !important;
 				word-break: keep-all;
 				overflow: hidden;
 				text-overflow: ellipsis;
@@ -136,9 +142,9 @@
 			.overlay .btn {
 				display: block;
 				width: 100%;
-				margin: 8px 0;
-				font-size: 0.63em;
-				padding: 10px 15px;
+				margin: 5px 0;
+				font-size: 0.4em !important;
+				padding: 6px 10px !important;
 				text-align: center;
 			}
 			
