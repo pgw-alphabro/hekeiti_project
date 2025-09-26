@@ -69,13 +69,8 @@
 		@media (max-width: 768px) {
 			/* 전체 레이아웃 조정 */
 			body {
-				font-size: 0.2em;
-				line-height: 1.1;
-			}
-			
-			/* 모든 텍스트 크기 강제 적용 */
-			* {
-				font-size: 0.2em !important;
+				font-size: 0.9em;
+				line-height: 1.6;
 			}
 			
 			/* 헤더 로고 조정 */
@@ -93,32 +88,32 @@
 			}
 			
 			.overlay h2 {
-				font-size: 0.35em !important;
-				margin-bottom: 3px;
-				line-height: 1.0;
+				font-size: 1.5em !important;
+				margin-bottom: 15px;
+				line-height: 1.3;
 			}
 			
 			/* 소제목들 */
 			.overlay h5 {
-				font-size: 0.245em !important;
-				margin: 3px 0 2px 0;
-				line-height: 1.1;
+				font-size: 1.1em !important;
+				margin: 12px 0 8px 0;
+				line-height: 1.4;
 			}
 			
 			/* 표 스타일 - 모바일에서 가로 스크롤 가능 */
 			.overlay table {
-				font-size: 0.175em !important;
-				margin: 2px 0 !important;
-				width: 100% !important;
-				table-layout: fixed !important;
+				font-size: 0.8em;
+				margin: 10px 0;
+				width: 100%;
+				table-layout: fixed;
 			}
 			
 			.overlay table th,
 			.overlay table td {
-				padding: 1px 1px !important;
-				word-break: keep-all !important;
-				overflow: hidden !important;
-				text-overflow: ellipsis !important;
+				padding: 6px 4px;
+				word-break: keep-all;
+				overflow: hidden;
+				text-overflow: ellipsis;
 			}
 			
 			/* 표 컨테이너에 가로 스크롤 추가 */
@@ -129,34 +124,28 @@
 			
 			/* 버튼들 */
 			.overlay .btn {
-				display: block !important;
-				width: 100% !important;
-				margin: 2px 0 !important;
-				font-size: 0.21em !important;
-				padding: 2px 3px !important;
-				text-align: center !important;
+				display: block;
+				width: 100%;
+				margin: 8px 0;
+				font-size: 0.9em;
+				padding: 10px 15px;
+				text-align: center;
 			}
 			
 			/* 운영절차 섹션 */
 			.process-steps {
-				flex-direction: row !important;
-				align-items: flex-start !important;
-				margin: 10px 0 !important;
-				padding: 0 1px !important;
-				justify-content: space-between !important;
-				flex-wrap: wrap !important;
+				flex-direction: column;
+				align-items: center;
+				margin: 20px 0;
+				padding: 0 5px;
 			}
 			
 			.process-step {
-				margin: 5px 0 !important;
-				width: 18% !important;
-				max-width: 18% !important;
-				padding: 3px 1px !important;
-				text-align: center !important;
-				display: flex !important;
-				flex-direction: column !important;
-				align-items: center !important;
-				gap: 3px !important;
+				margin: 15px 0;
+				width: 100%;
+				max-width: 100%;
+				padding: 10px 2px;
+				text-align: center;
 			}
 			
 			.process-content {
@@ -166,17 +155,16 @@
 			}
 			
 			.process-circle {
-				width: 10px;
-				height: 10px;
-				font-size: 0.21em;
-				margin: 0 0 1px 0;
-				flex-shrink: 0;
+				width: 80px;
+				height: 80px;
+				font-size: 1.4em;
+				margin: 0 auto 15px auto;
 			}
 			
 			.process-title {
-				font-size: 0.14em;
-				margin-bottom: 1px;
-				line-height: 0.9;
+				font-size: 1.1em;
+				margin-bottom: 8px;
+				line-height: 1.3;
 				text-align: center;
 				width: 100%;
 				white-space: normal;
@@ -185,8 +173,8 @@
 			}
 			
 			.process-description {
-				font-size: 0.105em;
-				line-height: 1.0;
+				font-size: 0.9em;
+				line-height: 1.4;
 				text-align: center;
 				width: 100%;
 				white-space: normal;
@@ -194,9 +182,9 @@
 				overflow-wrap: break-word;
 			}
 			
-			/* 연결선 표시 (모바일에서도 가로 배치) */
+			/* 연결선 제거 (모바일에서는 세로 배치) */
 			.process-connector {
-				display: block;
+				display: none;
 			}
 			
 			/* 푸터 */
