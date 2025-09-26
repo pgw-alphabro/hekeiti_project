@@ -206,6 +206,26 @@
 				height: auto;
 				display: block;
 				margin: 5px auto;
+				position: relative;
+				z-index: 1;
+			}
+			
+			/* 배경 이미지 겹침 방지 */
+			.overlay {
+				position: relative;
+				z-index: 2;
+			}
+			
+			/* 헤더 이미지 겹침 방지 */
+			.header-logo {
+				position: relative;
+				z-index: 3;
+			}
+			
+			/* 푸터 이미지 겹침 방지 */
+			.footer img {
+				position: relative;
+				z-index: 1;
 			}
 			
 			/* 텍스트 겹침 방지 */
