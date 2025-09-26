@@ -67,79 +67,101 @@
 		<style>
 		/* 모바일 반응형 스타일 */
 		@media (max-width: 768px) {
+			/* 전체 레이아웃 조정 */
+			body {
+				font-size: 0.9em;
+				line-height: 1.6;
+			}
+			
 			/* 헤더 로고 조정 */
 			.header-logo img {
-				max-width: 150px;
+				max-width: 120px;
 				height: auto;
+				margin: 10px 0;
 			}
 			
 			/* 공모요강 섹션 */
 			.overlay {
-				padding: 20px 15px;
-				margin: 20px 10px;
+				padding: 15px 10px;
+				margin: 15px 5px;
+				overflow: visible;
 			}
 			
 			.overlay h2 {
-				font-size: 1.8em !important;
-				margin-bottom: 20px;
+				font-size: 1.5em !important;
+				margin-bottom: 15px;
+				line-height: 1.3;
 			}
 			
 			/* 소제목들 */
 			.overlay h5 {
-				font-size: 1.2em !important;
-				margin: 15px 0 10px 0;
+				font-size: 1.1em !important;
+				margin: 12px 0 8px 0;
+				line-height: 1.4;
 			}
 			
-			/* 표 스타일 */
+			/* 표 스타일 - 모바일에서 가로 스크롤 가능 */
 			.overlay table {
-				font-size: 0.9em;
-				margin: 15px 0;
+				font-size: 0.8em;
+				margin: 10px 0;
+				width: 100%;
+				table-layout: fixed;
 			}
 			
 			.overlay table th,
 			.overlay table td {
-				padding: 8px 6px;
+				padding: 6px 4px;
 				word-break: keep-all;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			
+			/* 표 컨테이너에 가로 스크롤 추가 */
+			.table-responsive {
+				overflow-x: auto;
+				-webkit-overflow-scrolling: touch;
 			}
 			
 			/* 버튼들 */
 			.overlay .btn {
 				display: block;
 				width: 100%;
-				margin: 10px 0;
-				font-size: 1em;
-				padding: 12px 20px;
+				margin: 8px 0;
+				font-size: 0.9em;
+				padding: 10px 15px;
+				text-align: center;
 			}
 			
 			/* 운영절차 섹션 */
 			.process-steps {
 				flex-direction: column;
 				align-items: center;
-				margin: 30px 0;
-				padding: 0 20px;
+				margin: 20px 0;
+				padding: 0 10px;
 			}
 			
 			.process-step {
-				margin: 25px 0;
+				margin: 20px 0;
 				width: 100%;
-				max-width: 320px;
-				padding: 15px;
+				max-width: 280px;
+				padding: 10px;
 			}
 			
 			.process-circle {
-				width: 90px;
-				height: 90px;
-				font-size: 1.5em;
-				margin: 0 auto 15px auto;
+				width: 70px;
+				height: 70px;
+				font-size: 1.3em;
+				margin: 0 auto 12px auto;
 			}
 			
 			.process-title {
-				font-size: 1.1em;
-				margin-bottom: 8px;
+				font-size: 1em;
+				margin-bottom: 6px;
+				line-height: 1.3;
 			}
 			
 			.process-description {
-				font-size: 0.9em;
+				font-size: 0.85em;
 				line-height: 1.4;
 			}
 			
@@ -150,25 +172,46 @@
 			
 			/* 푸터 */
 			.footer {
-				padding: 20px 15px;
+				padding: 15px 10px;
 				text-align: center;
 			}
 			
 			.footer img {
-				max-width: 120px;
+				max-width: 100px;
 				height: auto;
-				margin: 10px;
-			}
-			
-			/* 전체 텍스트 크기 조정 */
-			body {
-				font-size: 0.95em;
+				margin: 8px;
 			}
 			
 			/* 공지사항 박스 */
 			.overlay blockquote {
-				margin: 15px 0;
-				padding: 15px;
+				margin: 12px 0;
+				padding: 12px;
+				font-size: 0.9em;
+			}
+			
+			/* 이미지 겹침 방지 */
+			img {
+				max-width: 100%;
+				height: auto;
+				display: block;
+				margin: 5px auto;
+			}
+			
+			/* 텍스트 겹침 방지 */
+			p, h1, h2, h3, h4, h5, h6 {
+				margin: 8px 0;
+				line-height: 1.4;
+			}
+			
+			/* 리스트 아이템 간격 */
+			ul, ol {
+				margin: 10px 0;
+				padding-left: 20px;
+			}
+			
+			li {
+				margin: 5px 0;
+				line-height: 1.4;
 			}
 		}
 		
@@ -362,7 +405,8 @@
                         <ul style="margin-left: -20px">
                             <li>환경창업 지원사업 안내 및 맞춤형 전문가 멘토링</li>
                         </ul>
-                        <table class="table table-responsive-md text-center" style="border: 1px solid #ddd;">
+                        <div class="table-responsive">
+                            <table class="table table-responsive-md text-center" style="border: 1px solid #ddd;">
                             <tbody class="text-3 txt-777">
 								<tr>
                                     <th colspan="" rowspan="" class="bg-f2" style="width: 33.3%; border: 1px solid #ddd; background-color: #f8f9fa; padding: 4px 8px;"><p class="mb-0">멘토링 분야</p></th>
@@ -401,6 +445,7 @@
                                 </tr>
                             </tbody>
                         </table>
+                        </div>
                         <p class="txt-notice indent15">※ 맞춤형 전문가 멘토링은 예산 상황에 따라 조기 마감 가능</p>
                     </div>
                 </div>
