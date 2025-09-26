@@ -139,18 +139,23 @@
 			
 			/* 운영절차 섹션 */
 			.process-steps {
-				flex-direction: column;
-				align-items: center;
+				flex-direction: row;
+				align-items: flex-start;
 				margin: 20px 0;
 				padding: 0 5px;
+				justify-content: space-between;
+				flex-wrap: nowrap;
+				position: relative;
 			}
 			
 			.process-step {
-				margin: 15px 0;
-				width: 100%;
-				max-width: 100%;
-				padding: 10px 2px;
+				margin: 10px 0;
+				width: 18%;
+				max-width: 18%;
+				padding: 5px 2px;
 				text-align: center;
+				position: relative;
+				z-index: 2;
 			}
 			
 			.process-content {
@@ -160,10 +165,10 @@
 			}
 			
 			.process-circle {
-				width: 56px;
-				height: 56px;
-				font-size: 0.98em;
-				margin: 0 auto 15px auto;
+				width: 40px;
+				height: 40px;
+				font-size: 0.7em;
+				margin: 0 auto 5px auto;
 			}
 			
 			.process-title {
@@ -187,9 +192,16 @@
 				overflow-wrap: break-word;
 			}
 			
-			/* 연결선 제거 (모바일에서는 세로 배치) */
+			/* 연결선 표시 (모바일에서도 가로 배치) */
 			.process-connector {
-				display: none;
+				display: block;
+				position: absolute;
+				top: 20px;
+				left: 9%;
+				right: 9%;
+				height: 2px;
+				background-color: #ddd;
+				z-index: 1;
 			}
 			
 			/* 푸터 */
