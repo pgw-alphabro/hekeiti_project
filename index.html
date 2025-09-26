@@ -69,8 +69,13 @@
 		@media (max-width: 768px) {
 			/* 전체 레이아웃 조정 */
 			body {
-				font-size: 0.21em;
-				line-height: 1.2;
+				font-size: 0.2em;
+				line-height: 1.1;
+			}
+			
+			/* 모든 텍스트 크기 강제 적용 */
+			* {
+				font-size: 0.2em !important;
 			}
 			
 			/* 헤더 로고 조정 */
@@ -102,18 +107,18 @@
 			
 			/* 표 스타일 - 모바일에서 가로 스크롤 가능 */
 			.overlay table {
-				font-size: 0.175em;
-				margin: 2px 0;
-				width: 100%;
-				table-layout: fixed;
+				font-size: 0.175em !important;
+				margin: 2px 0 !important;
+				width: 100% !important;
+				table-layout: fixed !important;
 			}
 			
 			.overlay table th,
 			.overlay table td {
-				padding: 1px 1px;
-				word-break: keep-all;
-				overflow: hidden;
-				text-overflow: ellipsis;
+				padding: 1px 1px !important;
+				word-break: keep-all !important;
+				overflow: hidden !important;
+				text-overflow: ellipsis !important;
 			}
 			
 			/* 표 컨테이너에 가로 스크롤 추가 */
@@ -124,34 +129,34 @@
 			
 			/* 버튼들 */
 			.overlay .btn {
-				display: block;
-				width: 100%;
-				margin: 2px 0;
-				font-size: 0.21em;
-				padding: 2px 3px;
-				text-align: center;
+				display: block !important;
+				width: 100% !important;
+				margin: 2px 0 !important;
+				font-size: 0.21em !important;
+				padding: 2px 3px !important;
+				text-align: center !important;
 			}
 			
 			/* 운영절차 섹션 */
 			.process-steps {
-				flex-direction: row;
-				align-items: flex-start;
-				margin: 10px 0;
-				padding: 0 1px;
-				justify-content: space-between;
-				flex-wrap: wrap;
+				flex-direction: row !important;
+				align-items: flex-start !important;
+				margin: 10px 0 !important;
+				padding: 0 1px !important;
+				justify-content: space-between !important;
+				flex-wrap: wrap !important;
 			}
 			
 			.process-step {
-				margin: 5px 0;
-				width: 18%;
-				max-width: 18%;
-				padding: 3px 1px;
-				text-align: center;
+				margin: 5px 0 !important;
+				width: 18% !important;
+				max-width: 18% !important;
+				padding: 3px 1px !important;
+				text-align: center !important;
 				display: flex !important;
 				flex-direction: column !important;
-				align-items: center;
-				gap: 3px;
+				align-items: center !important;
+				gap: 3px !important;
 			}
 			
 			.process-content {
