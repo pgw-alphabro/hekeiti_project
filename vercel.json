@@ -6,10 +6,10 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/mainpage.html"
+      "source": "/(.*)",
+      "destination": "/mainpage.html"
     }
   ],
   "headers": [
