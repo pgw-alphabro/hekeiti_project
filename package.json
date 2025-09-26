@@ -1,0 +1,13 @@
+{
+  "name": "keiti-project",
+  "version": "1.0.0",
+  "description": "KEITI 환경창업 아이디어 상시 모집 웹사이트",
+  "main": "mainpage.html",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'",
+    "start": "echo 'Static site - serve mainpage.html'"
+  },
+  "keywords": ["keiti", "environment", "startup", "static"],
+  "author": "pgw-alphabro",
+  "license": "MIT"
+}
