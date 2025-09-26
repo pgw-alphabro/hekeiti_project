@@ -63,6 +63,132 @@
 		<link rel="stylesheet" href="custom.css">
 		<link rel="stylesheet" href="default.css">
 
+		<!-- Mobile Responsive CSS -->
+		<style>
+		/* 모바일 반응형 스타일 */
+		@media (max-width: 768px) {
+			/* 헤더 로고 조정 */
+			.header-logo img {
+				max-width: 150px;
+				height: auto;
+			}
+			
+			/* 공모요강 섹션 */
+			.overlay {
+				padding: 20px 15px;
+				margin: 20px 10px;
+			}
+			
+			.overlay h2 {
+				font-size: 1.8em !important;
+				margin-bottom: 20px;
+			}
+			
+			/* 소제목들 */
+			.overlay h5 {
+				font-size: 1.2em !important;
+				margin: 15px 0 10px 0;
+			}
+			
+			/* 표 스타일 */
+			.overlay table {
+				font-size: 0.9em;
+				margin: 15px 0;
+			}
+			
+			.overlay table th,
+			.overlay table td {
+				padding: 8px 6px;
+				word-break: keep-all;
+			}
+			
+			/* 버튼들 */
+			.overlay .btn {
+				display: block;
+				width: 100%;
+				margin: 10px 0;
+				font-size: 1em;
+				padding: 12px 20px;
+			}
+			
+			/* 운영절차 섹션 */
+			.process-steps {
+				flex-direction: column;
+				align-items: center;
+				margin: 20px 0;
+			}
+			
+			.process-step {
+				margin: 15px 0;
+				width: 100%;
+				max-width: 300px;
+			}
+			
+			.process-circle {
+				width: 80px;
+				height: 80px;
+				font-size: 1.4em;
+				margin: 0 auto 10px auto;
+			}
+			
+			.process-title {
+				font-size: 1.1em;
+				margin-bottom: 8px;
+			}
+			
+			.process-description {
+				font-size: 0.9em;
+				line-height: 1.4;
+			}
+			
+			/* 연결선 제거 (모바일에서는 세로 배치) */
+			.process-connector {
+				display: none;
+			}
+			
+			/* 푸터 */
+			.footer {
+				padding: 20px 15px;
+				text-align: center;
+			}
+			
+			.footer img {
+				max-width: 120px;
+				height: auto;
+				margin: 10px;
+			}
+			
+			/* 전체 텍스트 크기 조정 */
+			body {
+				font-size: 0.95em;
+			}
+			
+			/* 공지사항 박스 */
+			.overlay blockquote {
+				margin: 15px 0;
+				padding: 15px;
+			}
+		}
+		
+		/* 태블릿 크기 (768px - 1024px) */
+		@media (min-width: 769px) and (max-width: 1024px) {
+			.overlay {
+				padding: 30px 25px;
+				margin: 30px 20px;
+			}
+			
+			.process-steps {
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			
+			.process-step {
+				width: 45%;
+				margin: 15px 10px;
+			}
+		}
+		</style>
+
 		<!-- Local JS -->
 		<script src="common.min.js"></script>
 		<script src="af_front_js.js"></script>
