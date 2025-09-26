@@ -437,6 +437,39 @@
 			}
 		}
 		
+		/* 아이폰 추가 강제 적용 - 더 직접적인 방법 */
+		@media screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+			.mainbg {
+				height: 250px !important;
+				background-image: url("images/bg.png") !important;
+				background-size: cover !important;
+				background-position: center !important;
+				background-repeat: no-repeat !important;
+			}
+			.overlay h2 {
+				font-size: 2.2em !important;
+			}
+			.footer img {
+				max-width: 60px !important;
+				height: auto !important;
+				margin: 4px !important;
+			}
+			.overlay .btn, .btn {
+				display: inline-block !important;
+				width: auto !important;
+				margin: 3px 5px !important;
+				font-size: 0.4em !important;
+				padding: 6px 12px !important;
+				text-align: left !important;
+				background-color: #28a745 !important;
+				color: white !important;
+				border: none !important;
+				border-radius: 4px !important;
+				box-shadow: 0 1px 4px rgba(40, 167, 69, 0.3) !important;
+				text-decoration: none !important;
+			}
+		}
+		
 		
 		/* 배경 이미지와 공모요강 사이 공간 제거 */
 		.container.py-2 {
