@@ -372,7 +372,7 @@
 <style>
 	/* Hover effects removed */
 	.overlay {
-		height: 200px;
+		height: 500px;
 	}
 	.owl-carousel-wrapper {
         background-image: url("images/bg.png");
@@ -394,6 +394,13 @@
 			background-position: center;
 			background-size: cover;
 			height: 250px !important;
+		}
+		
+		/* PC 버전 강제 적용 */
+		@media (min-width: 769px) {
+			.mainbg {
+				height: 500px !important;
+			}
 		}
 		
 		
