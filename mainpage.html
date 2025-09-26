@@ -69,8 +69,13 @@
 		@media (max-width: 768px) {
 			/* 전체 레이아웃 조정 */
 			body {
-				font-size: 0.63em;
-				line-height: 1.6;
+				font-size: 0.63em !important;
+				line-height: 1.6 !important;
+			}
+			
+			/* 모든 텍스트 요소 강제 적용 */
+			p, li, span, div, h1, h2, h3, h4, h5, h6 {
+				font-size: 0.63em !important;
 			}
 			
 			/* 헤더 로고 조정 */
