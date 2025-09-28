@@ -106,6 +106,30 @@
 				-webkit-transform: translateZ(0) !important;
 				transform: translateZ(0) !important;
 			}
+			
+			/* 아이폰 텍스트 강제 표시 - 모든 텍스트 요소 */
+			p, li, span, div, h1, h2, h3, h4, h5, h6, td, th {
+				color: #000000 !important;
+				display: block !important;
+				visibility: visible !important;
+				opacity: 1 !important;
+				font-size: 0.8em !important;
+				line-height: 1.4 !important;
+			}
+			
+			/* 테이블 요소 특별 처리 */
+			table, tr, td, th {
+				display: table !important;
+				visibility: visible !important;
+				color: #000000 !important;
+			}
+			
+			/* 인라인 요소들 */
+			span, a, button {
+				display: inline !important;
+				visibility: visible !important;
+				color: #000000 !important;
+			}
 			/* 전체 레이아웃 조정 */
 			body {
 				font-size: 0.5em !important;
